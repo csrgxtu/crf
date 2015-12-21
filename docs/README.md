@@ -4,3 +4,4 @@
 3, HMM  
 4, MEMM  
 5, CRF  
+使用词性标注的例子来解释HMM和CRF
