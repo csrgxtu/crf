@@ -7,4 +7,6 @@
 [PRML读书会第八章 Graphical Models](http://www.52nlp.cn/prml%E8%AF%BB%E4%B9%A6%E4%BC%9A%E7%AC%AC%E5%85%AB%E7%AB%A0-graphical-models)  
 [概率图模型的理论与实战](http://dataunion.org/16448.html)  
 [概率图模型基础总结](http://dataunion.org/12187.html)  
-  
+中文分词的原理与实现  解密搜索引擎技术实战之中文分词的原理与实现  
+[Itenyh版-用HMM做中文分词一：序](http://www.52nlp.cn/itenyh%E7%89%88-%E7%94%A8hmm%E5%81%9A%E4%B8%AD%E6%96%87%E5%88%86%E8%AF%8D%E4%B8%80%EF%BC%9A%E5%BA%8F)  
+
