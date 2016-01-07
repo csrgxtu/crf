@@ -12,3 +12,6 @@ https://www.zhihu.com/question/19994255
 
 句法分析指分析文本中的主语谓语等  
 
+CRF HMM 综述
+https://www.douban.com/group/topic/39189465/?type=rec#sep  
+
