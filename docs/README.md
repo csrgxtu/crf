@@ -10,3 +10,5 @@ NER 命名体识别
 http://baike.baidu.com/view/1939292.htm  
 https://www.zhihu.com/question/19994255  
 
+句法分析指分析文本中的主语谓语等  
+
