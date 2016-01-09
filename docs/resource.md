@@ -11,4 +11,4 @@
 [Itenyh版-用HMM做中文分词一：序](http://www.52nlp.cn/itenyh%E7%89%88-%E7%94%A8hmm%E5%81%9A%E4%B8%AD%E6%96%87%E5%88%86%E8%AF%8D%E4%B8%80%EF%BC%9A%E5%BA%8F)  
 [浅谈中文分词](http://www.isnowfy.com/introduction-to-chinese-segmentation/)  
 [Natrual Language Processing](https://class.coursera.org/nlangp-001/)  
-
+[Introduction to Conditional Random Fields](http://blog.echen.me/2012/01/03/introduction-to-conditional-random-fields/)  
