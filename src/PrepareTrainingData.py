@@ -12,7 +12,7 @@
 # Produced By CSRGXTU
 import sys
 
-from Utility import loadMatrixFromFile
+from Utility import loadMatrixFromFile, saveMatrixToFile
 
 if len(sys.argv) != 2:
   print 'Usage: PrepareTrainingData.py teamid'
@@ -26,24 +26,47 @@ mat = loadMatrixFromFile(DATA_PATH + teamid + '.csv.sorted')
 
 # print mat[0]
 trainMat = []
-for row in mat:
+# for row in mat:
+for i in range(len(mat)):
   tmp = []
   # GameName
-  tmp.append()
-
-  # HomeAway
+  tmp.append('G' + str(i + 1))
+  # HomeAway, home is H, else A
+  if '@' in mat[i][5]:
+    tmp.append('H')
+  else:
+    tmp.append('A')
   # FGM
+  tmp.append(mat[i][6])
   # FGA
+  tmp.append(mat[i][7])
   # 3PM
+  tmp.append(mat[i][8])
   # 3PA
+  tmp.append(mat[i][9])
   # FTM
+  tmp.append(mat[i][10])
   # FTA
+  tmp.append(mat[i][11])
   # OREB
+  tmp.append(mat[i][12])
   # DREB
+  tmp.append(mat[i][13])
   # AST
+  tmp.append(mat[i][14])
   # TOV
+  tmp.append(mat[i][17])
   # STL
+  tmp.append(mat[i][15])
   # BLK
+  tmp.append(mat[i][16])
   # PF
+  tmp.append(mat[i][18])
   # PTS
+  tmp.append(mat[i][19])
   # WinLose
+  tmp.append(mat[i][0])
+
+  trainMat.append(tmp)
+
+saveMatrixToFile(DATA_PATH + teamid + '.train.csv', trainMat)
