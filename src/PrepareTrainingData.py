@@ -7,19 +7,18 @@
 # Desc: preparing the training data for CRF++
 #
 # Produced By CSRGXTU
-from Utility import loadSeasons, loadTeamIds
+import sys
+
+from Utility import loadMatrixFromFile
+
+if len(sys.argv) != 2:
+  print 'Usage: PrepareTrainingData.py teamid'
+  sys.exit(1)
+
+teamid = sys.argv[1]
 
 DATA_PATH = '../data/TeamRank/'
 
-seasons = loadSeasons(DATA_PATH + 'seasons.csv')
-# print seasons
+mat = loadMatrixFromFile(DATA_PATH + teamid + '.csv.sorted')
 
-teams = loadTeamIds(DATA_PATH + 'teamidshortname.csv')
-# print teams
-
-files = []
-for team in teams:
-  for season in seasons:
-    files.append(DATA_PATH + team + '.csv.sorted.' + season + '.csv')
-
-print files
+print mat[0]
