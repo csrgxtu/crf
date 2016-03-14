@@ -63,6 +63,20 @@ def loadMatrixFromFile(inputFile):
       res.append(line.rstrip().split(','))
   return res
 
+#loadCrfMatrixFromFile
+# load string matrix from file for crf++
+#
+# @param inputFile
+# @return lst 2 dim
+def loadCrfMatrixFromFile(inputFile):
+  res = []
+  with open(inputFile, 'r') as myFile:
+    for line in myFile:
+      res.append(line.rstrip().split(' '))
+    myFile.close()
+
+  return res
+
 # saveMatrixToFile
 # save an string matrix to file
 #
