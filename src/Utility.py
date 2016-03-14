@@ -75,6 +75,19 @@ def saveMatrixToFile(outputFile, matrix):
       myFile.write(','.join([str(x) for x in row]) + '\n')
     myFile.close()
 
+# saveCrfMatrix
+# save an crf++ matrix 2 file
+#
+# @param outputFile
+# @param matrix
+# @return none
+def saveCrfMatrix(outputFile, matrix):
+  with open(outputFile, 'w') as myFile:
+    for row in matrix:
+      myFile.write(' '.join([str(x) for x in row]) + '\n')
+
+    myFile.close()
+
 # saveLstToFile
 # save an list to file
 #

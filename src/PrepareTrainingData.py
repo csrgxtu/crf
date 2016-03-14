@@ -12,7 +12,7 @@
 # Produced By CSRGXTU
 import sys
 
-from Utility import loadMatrixFromFile, saveMatrixToFile
+from Utility import loadMatrixFromFile, saveCrfMatrix
 
 if len(sys.argv) != 2:
   print 'Usage: PrepareTrainingData.py teamid'
@@ -24,9 +24,7 @@ DATA_PATH = '../data/TeamRank/'
 
 mat = loadMatrixFromFile(DATA_PATH + teamid + '.csv.sorted')
 
-# print mat[0]
 trainMat = []
-# for row in mat:
 for i in range(len(mat)):
   tmp = []
   # GameName
@@ -69,4 +67,15 @@ for i in range(len(mat)):
 
   trainMat.append(tmp)
 
-saveMatrixToFile(DATA_PATH + teamid + '.train.csv', trainMat)
+TrainMat = []
+for i in range(len(trainMat)):
+  TrainMat.append(trainMat[i])
+  TrainMat.append(trainMat[i + 1])
+  TrainMat.append(trainMat[i + 2])
+  TrainMat.append(trainMat[i + 3])
+  TrainMat.append(trainMat[i + 4])
+  TrainMat.append(trainMat[i + 5])
+  TrainMat.apped([])
+
+
+saveCrfMatrix(DATA_PATH + teamid + '.train.csv', trainMat)
