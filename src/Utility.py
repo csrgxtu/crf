@@ -72,7 +72,7 @@ def loadCrfMatrixFromFile(inputFile):
   res = []
   with open(inputFile, 'r') as myFile:
     for line in myFile:
-      res.append(line.rstrip().split(' '))
+      res.append(line.rstrip().split('\t'))
     myFile.close()
 
   return res
