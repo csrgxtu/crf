@@ -69,13 +69,15 @@ for i in range(len(mat)):
 
 TrainMat = []
 for i in range(len(trainMat)):
+  if i == len(trainMat) - 5:
+    break
   TrainMat.append(trainMat[i])
   TrainMat.append(trainMat[i + 1])
   TrainMat.append(trainMat[i + 2])
   TrainMat.append(trainMat[i + 3])
   TrainMat.append(trainMat[i + 4])
   TrainMat.append(trainMat[i + 5])
-  TrainMat.apped([])
+  TrainMat.append([])
 
 
-saveCrfMatrix(DATA_PATH + teamid + '.train.csv', trainMat)
+saveCrfMatrix(DATA_PATH + teamid + '.train.csv', TrainMat)
