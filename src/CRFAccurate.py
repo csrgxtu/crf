@@ -11,7 +11,7 @@ import sys
 from Utility import loadCrfMatrixFromFile
 
 if len(sys.argv) != 2:
-  print 'Usage: CRFAccurate.py inputFile'
+  print 'Usage: CRFAccurate.py result.log'
   sys.exit(1)
 
 inputFile = sys.argv[1]
