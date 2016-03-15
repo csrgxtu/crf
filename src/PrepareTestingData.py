@@ -21,7 +21,7 @@ DATA_PATH = '../data/TeamRank/'
 
 mat = loadMatrixFromFile(DATA_PATH + teamid + '.csv.sorted')
 
-ttestMat = []
+testMat = []
 for i in range(len(mat)):
   tmp = []
   # GameName
@@ -62,19 +62,19 @@ for i in range(len(mat)):
   # WinLose
   tmp.append(mat[i][0])
 
-  trainMat.append(tmp)
+  testMat.append(tmp)
 
 TestMat = []
-for i in range(len(trainMat)):
-  if i == len(trainMat) - 5:
+for i in range(len(testMat)):
+  if i == len(testMat) - 5:
     break
-  TrainMat.append(trainMat[i])
-  TrainMat.append(trainMat[i + 1])
-  TrainMat.append(trainMat[i + 2])
-  TrainMat.append(trainMat[i + 3])
-  TrainMat.append(trainMat[i + 4])
-  TrainMat.append(trainMat[i + 5])
-  TrainMat.append([])
+  TestMat.append(testMat[i])
+  TestMat.append(testMat[i + 1])
+  TestMat.append(testMat[i + 2])
+  TestMat.append(testMat[i + 3])
+  TestMat.append(testMat[i + 4])
+  TestMat.append(testMat[i + 5])
+  TestMat.append([])
 
 
 saveCrfMatrix(DATA_PATH + teamid + '.test.csv', TestMat[-63:])
