@@ -1,0 +1,9 @@
+./PrepareTrainingData.py 1610612757
+
+./PrepareTestingData.py 1610612757
+
+../bin/bin/crf_learn template-file ../data/TeamRank/1610612757.train.csv model-file
+
+../bin/bin/crf_test -m model-file ../data/TeamRank/1610612757.test.csv > result.log
+
+./CRFAccurate.py result.log

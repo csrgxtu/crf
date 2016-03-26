@@ -77,4 +77,4 @@ for i in range(len(testMat)):
   TestMat.append([])
 
 
-saveCrfMatrix(DATA_PATH + teamid + '.test.csv', TestMat[-63:])
+saveCrfMatrix(DATA_PATH + teamid + '.test.csv', TestMat[-99:])
