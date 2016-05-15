@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # coding = utf8
-# 
+#
 # Author: Archer Reilly
 # File: Utility.py
 # Date: 15/Oct/2014
@@ -125,6 +125,14 @@ def loadTeamIds(inputFile):
       teamIds.append(line.split(',')[0])
 
   return teamIds
+
+def loadTeamRanks(inputFile):
+  TeamRanks = []
+  with open(inputFile, "r") as myFile:
+    for line in myFile:
+      TeamRanks.append(line.split(','))
+
+  return TeamRanks
 
 # loadSeasons
 # load seasons from file

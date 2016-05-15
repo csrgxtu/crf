@@ -82,7 +82,6 @@ for i in range(10):
   print trainMat[i]
 
 print '#####'
-sys.exit(0)
 
 for i in range(len(trainMat) - 6):
 # for i in range(10 - 6):
@@ -105,7 +104,7 @@ for i in range(len(trainMat) - 6):
   WinLose = trainMat[i][16] + trainMat[i + 1][16] + trainMat[i + 2][16] + trainMat[i + 3][16] + trainMat[i + 4][16] + trainMat[i + 5][16]
   # tmp.append([HA, FGM/6, FGA/6, ThreePM/6, ThreePA/6, FTM/6, FTA/6, OREB/6, DREB/6, AST/6, TOV/6, STL/6, BLK/6, PF/6, PTS/6, WinLose])
   # print tmp
-  trainMat[i + 6] = [trainMat[i + 6][0], trainMat[i + 6][1], FGM/6, FGA/6, ThreePM/6, ThreePA/6, FTM/6, FTA/6, OREB/6, DREB/6, AST/6, TOV/6, STL/6, BLK/6, PF/6, PTS/6,trainMat[i + 6][16]]
+  trainMat[i + 6] = [trainMat[i + 6][0], trainMat[i + 6][1], FGM/6, FGA/6, ThreePM/6, ThreePA/6, FTM/6, FTA/6, OREB/6, DREB/6, AST/6, TOV/6, STL/6, BLK/6, PF/6, PTS/6, trainMat[i + 6][17], trainMat[i + 6][16]]
   print trainMat[i + 6]
   # for j in range(1, len(trainMat[i])):
   #   #   print j
@@ -116,6 +115,11 @@ for i in range(len(trainMat) - 6):
 
 # for i in range(10):
     # print trainMat[i]
+for i in range(6):
+    res = trainMat[i][16]
+    tr = trainMat[i][17]
+    trainMat[i][16] = tr
+    trainMat[i][17] = res
 
 TrainMat = []
 for i in range(len(trainMat)):
@@ -130,4 +134,4 @@ for i in range(len(trainMat)):
   TrainMat.append([])
 
 
-saveCrfMatrix(DATA_PATH + teamid + '.train6.csv', TrainMat[0:-99])
+saveCrfMatrix(DATA_PATH + teamid + '.train6tr.csv', TrainMat[0:-99])
