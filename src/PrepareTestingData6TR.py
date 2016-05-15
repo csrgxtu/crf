@@ -134,4 +134,4 @@ for i in range(len(trainMat)):
   TrainMat.append([])
 
 
-saveCrfMatrix(DATA_PATH + teamid + '.train6tr.csv', TrainMat[0:-99])
+saveCrfMatrix(DATA_PATH + teamid + '.test6tr.csv', TrainMat[-99:])
